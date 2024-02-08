@@ -6,7 +6,7 @@ class Fireworks {
   
   ctx = null // 画布上下文，都画这上面
   offScreenCtx = null // 离屏 canvas，优化性能
-  fps = 10 // 帧率控制
+  fps = 60 // 帧率控制
   fireworks = [] // 焰火数组
   fireworkCount = 8 // 焰火数量
   fireworkInterval = 400 // 焰火爆炸间隔💥
@@ -121,7 +121,7 @@ class Fireworks {
     this.loop()
     // 60 帧就用 requestAnimationFrame，否则用 setTimeout
     const animationFunction = this._useAnimationFrame ? requestAnimationFrame : setTimeout
-    const interval = 16.67 * (60 / this.fps)
+    const interval = 2 * (60 / this.fps)
     this.render(animationFunction, interval)
   }
 
