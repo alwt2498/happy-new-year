@@ -3,7 +3,7 @@ class Word {
   _loadImagePromise = null
   _animater = null
   _timer = null
-  _scale = 0.1
+  _scale = 0.001
   _maxScale = 1
   _step = STEP
   _precision = 2.5
